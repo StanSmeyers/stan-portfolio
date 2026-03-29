@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About me | Stan Smeyers</title>
-  <meta name="description" content="About me-pagina van Stan Smeyers." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script>(function(){ var t=localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();</script>
 </head>
 <body>
+
   <header class="site-header">
     <div class="container nav-wrapper">
       <a class="brand" href="index.html">
         <span class="brand-mark">SS</span>
-        <span>
-          <strong>Stan Smeyers</strong>
-          <small>Cloud & Cybersecurity</small>
-        </span>
+        <span><strong>Stan Smeyers</strong><small>Cloud & Cybersecurity</small></span>
       </a>
-
-      <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">☰</button>
-
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Thema wisselen">
+          <span class="icon-moon">🌙</span><span class="icon-sun">☀️</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">☰</button>
+      </div>
       <nav class="site-nav">
         <a href="index.html">Home</a>
         <a class="active" href="about.html">About me</a>
@@ -33,7 +34,8 @@
   </header>
 
   <main>
-    <section class="page-hero compact">
+
+    <section class="page-hero">
       <div class="container">
         <p class="eyebrow">About me</p>
         <h1>Meer over wie ik ben</h1>
@@ -44,18 +46,18 @@
       </div>
     </section>
 
+    <!-- ── Intro ── -->
     <section class="section">
       <div class="container about-layout">
         <div class="photo-card">
           <img class="profile-photo" src="assets/profielfoto.png" alt="Profielfoto van Stan Smeyers" />
         </div>
-
         <div class="about-content">
           <h2>Hallo, ik ben Stan.</h2>
           <p>
             Ik ben een 2de jaar student Cloud & Cybersecurity in Geel en ik kom uit Lille.
-            Ik omschrijf mezelf als sportief en gedisciplineerd. In mijn dagelijkse leven hecht ik veel waarde
-            aan sport, aan mijn vrienden en aan het blijven groeien als persoon.
+            Ik omschrijf mezelf als sportief en gedisciplineerd. In mijn dagelijkse leven hecht ik
+            veel waarde aan sport, aan mijn vrienden en aan het blijven groeien als persoon.
           </p>
           <p>
             Wat mij ook typeert, is mijn engagement binnen de jeugdorganisaties in Lille.
@@ -66,17 +68,17 @@
       </div>
     </section>
 
+    <!-- ── Info cards ── -->
     <section class="section alt">
       <div class="container grid two">
         <article class="info-card">
           <h3>Waarom ik voor deze richting koos</h3>
           <p>
             Ik koos voor Cloud & Cybersecurity omdat ik later graag in de wereld van business en IT wil werken.
-            Voor mij is dit de ideale technische basis om later verder te bouwen op een rol waarin strategie,
+            Voor mij is dit de ideale technische basis om verder te bouwen op een rol waarin strategie,
             technologie en samenwerking samenkomen.
           </p>
         </article>
-
         <article class="info-card">
           <h3>Wat mij technisch interesseert</h3>
           <p>
@@ -94,11 +96,10 @@
           <h3>Professionele ambities</h3>
           <p>
             Op lange termijn wil ik graag een business-IT-gerelateerde functie uitoefenen.
-            Ik wil iemand worden die technische kennis niet alleen begrijpt, maar ook kan vertalen naar een
-            meerwaarde voor klanten, organisaties en teams.
+            Ik wil iemand worden die technische kennis niet alleen begrijpt, maar ook kan vertalen naar
+            een meerwaarde voor klanten, organisaties en teams.
           </p>
         </article>
-
         <article class="info-card">
           <h3>Soft skills</h3>
           <ul class="skill-list">
@@ -112,68 +113,41 @@
       </div>
     </section>
 
+    <!-- ── Skills — badges, geen waarden ── -->
     <section class="section alt">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow">Skills in HTML</p>
+          <p class="eyebrow">Skills</p>
           <h2>Mijn huidige skillset</h2>
         </div>
-
         <div class="skills-grid">
           <div class="skill-card">
             <h3>Technische skills</h3>
-            <div class="skill-item">
-              <span>Netwerken</span>
-              <div class="meter"><div style="width: 75%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Cloud fundamentals</span>
-              <div class="meter"><div style="width: 70%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>IoT en device connectiviteit</span>
-              <div class="meter"><div style="width: 78%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Python / achterliggende code</span>
-              <div class="meter"><div style="width: 72%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>AI-prototyping</span>
-              <div class="meter"><div style="width: 65%"></div></div>
+            <div class="skill-tags">
+              <span class="skill-badge"><span class="skill-dot"></span>Netwerken</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Cloud fundamentals</span>
+              <span class="skill-badge"><span class="skill-dot"></span>IoT &amp; device connectiviteit</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Python</span>
+              <span class="skill-badge"><span class="skill-dot"></span>AI-prototyping</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Linux</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Cybersecurity basics</span>
             </div>
           </div>
-
           <div class="skill-card">
             <h3>Persoonlijke skills</h3>
-            <div class="skill-item">
-              <span>Teamwork</span>
-              <div class="meter"><div style="width: 90%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Communicatie</span>
-              <div class="meter"><div style="width: 86%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Motivatie</span>
-              <div class="meter"><div style="width: 88%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Planning</span>
-              <div class="meter"><div style="width: 74%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Leiderschap</span>
-              <div class="meter"><div style="width: 80%"></div></div>
+            <div class="skill-tags">
+              <span class="skill-badge"><span class="skill-dot"></span>Teamwork</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Communicatie</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Motivatie</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Planning</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Leiderschap</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Probleemoplossend denken</span>
             </div>
           </div>
         </div>
-
-        <p class="small-note">
-          Deze skills zijn een eerste versie voor je portfolio en kunnen later nog verfijnd worden wanneer je je CV uploadt.
-        </p>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">

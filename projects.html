@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Stan Smeyers</title>
-  <meta name="description" content="Projecten van Stan Smeyers." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script>(function(){ var t=localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();</script>
 </head>
 <body>
+
   <header class="site-header">
     <div class="container nav-wrapper">
       <a class="brand" href="index.html">
         <span class="brand-mark">SS</span>
-        <span>
-          <strong>Stan Smeyers</strong>
-          <small>Cloud & Cybersecurity</small>
-        </span>
+        <span><strong>Stan Smeyers</strong><small>Cloud & Cybersecurity</small></span>
       </a>
-
-      <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">☰</button>
-
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Thema wisselen">
+          <span class="icon-moon">🌙</span><span class="icon-sun">☀️</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">☰</button>
+      </div>
       <nav class="site-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About me</a>
@@ -33,105 +34,189 @@
   </header>
 
   <main>
-    <section class="page-hero compact">
+
+    <section class="page-hero">
       <div class="container">
         <p class="eyebrow">Projects</p>
         <h1>Projecten waar ik trots op ben</h1>
         <p class="lead narrow">
           Hier toon ik projecten uit mijn opleiding waarin ik zowel technisch als persoonlijk ben gegroeid.
+          Je ziet ook beelden uit mijn ontwikkelproces.
         </p>
+        <div class="project-toolbar" aria-label="Projectfilters">
+          <button class="filter-chip active" type="button" data-filter="all">Alles</button>
+          <button class="filter-chip" type="button" data-filter="iot">IoT</button>
+          <button class="filter-chip" type="button" data-filter="cloud">Cloud</button>
+          <button class="filter-chip" type="button" data-filter="ai">AI</button>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container project-stack">
-        <article class="project-card">
-          <div>
-            <p class="project-label">SKIL2 semester 1</p>
+
+        <!-- 1: Agricloud -->
+        <article class="project-card" data-category="iot">
+          <div class="project-card-main">
+            <p class="project-label">SKIL2 — Semester 1</p>
             <h2>Agricloud slim irrigatiesysteem</h2>
+            <div class="project-tech">
+              <span class="tag">IoT</span>
+              <span class="tag">Sensoren</span>
+              <span class="tag">Waterbesparing</span>
+            </div>
             <p>
               In dit project werkten we aan een oplossing voor een probleem binnen Agricloud.
               We ontwikkelden een slim systeem dat detecteert wanneer een veld besproeid moet worden,
               zodat een gebruiker of boer dit goed kan opvolgen en er water bespaard wordt.
             </p>
+            <div class="project-media-block">
+              <div class="project-media-header">
+                <h3>Beelden uit de opbouwfase</h3>
+                <p>Twee foto's van de hardware-opstelling terwijl we volop aan het bouwen waren.</p>
+              </div>
+              <div class="media-gallery two-up">
+                <figure class="media-card">
+                  <button class="media-trigger" type="button"
+                    data-media-src="assets/projects/iot-opbouw-1.jpg"
+                    data-media-alt="Hardware-opstelling van het slimme irrigatiesysteem">
+                    <img src="assets/projects/iot-opbouw-1.jpg" alt="Hardware-opstelling irrigatiesysteem" loading="lazy" />
+                  </button>
+                  <figcaption>Sensor- en bekabelingsopstelling tijdens het bouwen.</figcaption>
+                </figure>
+                <figure class="media-card">
+                  <button class="media-trigger" type="button"
+                    data-media-src="assets/projects/iot-opbouw-2.jpg"
+                    data-media-alt="Device connectiviteit irrigatiesysteem">
+                    <img src="assets/projects/iot-opbouw-2.jpg" alt="Device connectiviteit irrigatiesysteem" loading="lazy" />
+                  </button>
+                  <figcaption>Prototypebekabeling en device connectiviteit.</figcaption>
+                </figure>
+              </div>
+            </div>
           </div>
-          <div class="project-meta">
+          <div class="project-card-meta">
             <h3>Mijn bijdrage</h3>
             <p>
-              Ik werkte vooral aan de IoT-kant en de achterliggende code, onder andere met Orange Pi,
-              Raspberry Pi, Pico, de connectiviteit tussen de toestellen en pushmeldingen.
+              Ik werkte aan de IoT-kant en de achterliggende code — Orange Pi, Raspberry Pi, Pico,
+              connectiviteit tussen toestellen en pushmeldingen.
             </p>
             <h3>Wat ik leerde</h3>
-            <p>Device connectiviteit, praktische IoT-integratie, samenwerking en technisch probleemoplossend denken.</p>
+            <p>Device connectiviteit, praktische IoT-integratie, samenwerking en probleemoplossend denken.</p>
           </div>
         </article>
 
-        <article class="project-card">
-          <div>
-            <p class="project-label">SKIL2 semester 2</p>
+        <!-- 2: Hostingplatform -->
+        <article class="project-card" data-category="cloud">
+          <div class="project-card-main">
+            <p class="project-label">SKIL2 — Semester 2</p>
             <h2>Hostingplatform voor een klant</h2>
+            <div class="project-tech">
+              <span class="tag">Cloud</span>
+              <span class="tag">Security</span>
+              <span class="tag">Hosting</span>
+            </div>
             <p>
               In semester 2 bouwen we een hostingplatform waarop een klant websites, databanken en andere onderdelen kan hosten.
               Het project focust op veiligheid, automatisatie en een professionele werking van het platform.
             </p>
           </div>
-          <div class="project-meta">
+          <div class="project-card-meta">
             <h3>Mijn bijdrage</h3>
             <p>
-              We zijn nog in de beginfase, dus ik heb voorlopig vooral meegewerkt aan planning,
-              voorbereiding en presentaties samen met mijn team.
+              Nog in beginfase — ik werkte mee aan planning, voorbereiding en presentaties samen met mijn team.
             </p>
             <h3>Wat ik nu al opbouw</h3>
-            <p>Projectstructuur, teamwork, communicatie en inzicht in hosting, security en cloudgerichte aanpak.</p>
+            <p>Projectstructuur, teamwork, communicatie en inzicht in hosting, security en cloud.</p>
           </div>
         </article>
 
-        <article class="project-card">
-          <div>
+        <!-- 3: Slimme brievenbus + video -->
+        <article class="project-card" data-category="iot ai">
+          <div class="project-card-main">
             <p class="project-label">IoT Essentials</p>
             <h2>Slimme brievenbus</h2>
+            <div class="project-tech">
+              <span class="tag">IoT</span>
+              <span class="tag">AI</span>
+              <span class="tag">Software</span>
+            </div>
             <p>
               Voor dit project maakten we een slimme brievenbus waarbij een postbode scant welk type post wordt bezorgd.
-              De klant kan zelf aangeven of reclame gewenst is en krijgt meldingen wanneer er een brief of pakket is aangekomen.
+              De klant kan zelf aangeven of reclame gewenst is en krijgt meldingen bij een brief of pakket.
             </p>
+            <div class="project-media-block">
+              <div class="project-media-header">
+                <h3>Ontwikkelvideo</h3>
+                <p>Fragment uit de periode dat we volop bezig waren met de ontwikkeling van de slimme brievenbus
+                  en het AI-model aan het trainen waren.</p>
+              </div>
+              <figure class="media-card video-card">
+                <video controls preload="metadata">
+                  <source src="assets/projects/brievenbus-video.mp4" type="video/mp4" />
+                  Je browser ondersteunt deze video niet.
+                </video>
+                <figcaption>Ontwikkeling en AI-training van de slimme brievenbus.</figcaption>
+              </figure>
+            </div>
           </div>
-          <div class="project-meta">
+          <div class="project-card-meta">
             <h3>Mijn bijdrage</h3>
             <p>
-              Ik werkte vooral aan de software, de IoT-devices, de achterliggende code en het trainen van de AI die mee in het systeem zat.
+              Ik werkte aan de software, de IoT-devices, de achterliggende code en het trainen van de AI die mee in het systeem zat.
             </p>
             <h3>Wat ik leerde</h3>
-            <p>IoT-device integratie, softwarelogica, AI-training en het vertalen van gebruikersbehoeften naar een werkend systeem.</p>
+            <p>IoT-integratie, softwarelogica, AI-training en gebruikersbehoeften vertalen naar een werkend systeem.</p>
           </div>
         </article>
 
-        <article class="project-card">
-          <div>
+        <!-- 4: Racegame -->
+        <article class="project-card" data-category="ai">
+          <div class="project-card-main">
             <p class="project-label">Integration Skills</p>
             <h2>AI racegame met handtracking</h2>
+            <div class="project-tech">
+              <span class="tag">AI</span>
+              <span class="tag">Game development</span>
+              <span class="tag">Computer vision</span>
+            </div>
             <p>
               Tijdens een projectweek maakten we met een groep een racegame waarin je obstakels ontwijkt
               door een auto te besturen met handbewegingen via een camera, ondersteund door AI.
             </p>
+            <div class="project-media-block">
+              <div class="project-media-header">
+                <h3>Ontwikkelvideo</h3>
+                <p>Een fragment van 28 seconden uit de ontwikkelfase van de racegame.</p>
+              </div>
+              <figure class="media-card video-card">
+                <video controls preload="metadata" poster="assets/projects/racegame-poster.jpg">
+                  <source src="assets/projects/racegame-video.mp4" type="video/mp4" />
+                  Je browser ondersteunt deze video niet.
+                </video>
+                <figcaption>Racegame in ontwikkeling — testing van de interactieve setup.</figcaption>
+              </figure>
+            </div>
           </div>
-          <div class="project-meta">
+          <div class="project-card-meta">
             <h3>Mijn bijdrage</h3>
             <p>
-              Ik werkte vooral aan de achterliggende code en aan het trainen van het AI-model achter de game.
+              Ik werkte aan de achterliggende code en het trainen van het AI-model achter de game.
             </p>
             <h3>Wat ik leerde</h3>
             <p>AI-training, creatieve softwareontwikkeling, samenwerken onder tijdsdruk en het bouwen van een interactieve toepassing.</p>
           </div>
         </article>
-      </div>
 
-      <div class="container section-spacer">
-        <p class="small-note">
-          Screenshots en extra visuals kunnen later nog toegevoegd worden zodra je die doorstuurt.
-        </p>
       </div>
     </section>
+
   </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Sluiten">×</button>
+    <img class="lightbox-image" src="" alt="" />
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-content">
