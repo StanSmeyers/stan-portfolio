@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <rect width="800" height="1000" rx="42" fill="#E2E8F0"/>
+  <rect x="72" y="72" width="656" height="856" rx="34" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="8"/>
+  <circle cx="400" cy="335" r="120" fill="#94A3B8"/>
+  <path d="M220 760c0-116.016 94.03-210 210-210s210 93.984 210 210v44H220v-44Z" fill="#94A3B8"/>
+  <text x="400" y="890" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#475569">Foto van Stan komt hier</text>
+</svg>

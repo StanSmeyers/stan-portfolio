@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About me | Stan Smeyers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script>(function(){ var t=localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">SS</span>
+        <span><strong>Stan Smeyers</strong><small>Cloud & Cybersecurity</small></span>
+      </a>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Thema wisselen">
+          <span class="icon-moon">🌙</span><span class="icon-sun">☀️</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">☰</button>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About me</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">About me</p>
+        <h1>Meer dan een CV</h1>
+        <p class="lead narrow">
+          Wie ik ben, wat ik kan en waar ik naartoe wil, een eerlijk en volledig beeld van Stan Smeyers.
+        </p>
+      </div>
+    </section>
+
+    <!-- Intro met foto -->
+    <section class="section">
+      <div class="container about-layout">
+        <div class="photo-card reveal">
+          <img class="profile-photo" src="assets/profielfoto.png" alt="Profielfoto van Stan Smeyers" />
+        </div>
+        <div class="about-content">
+          <h2>Hallo, ik ben Stan.</h2>
+          <p>
+            Tweedejaars student Cloud &amp; Cybersecurity aan Thomas More Geel, afkomstig uit Lille.
+            Sportief, gedisciplineerd en altijd bereid om de handen uit de mouwen te steken,
+            zowel bij een netwerkopdracht als bij een event voor de jeugdvereniging.
+          </p>
+          <p>
+            Ik engageer me al jaren als vrijwilliger en voorzitter binnen jeugdorganisaties in Lille.
+            Die rol is meer dan hobby: ik leer er mensen motiveren, verantwoordelijkheid opnemen en
+            complexe situaties rustig aanpakken. Dat draag ik elke dag mee, ook in groepsprojecten
+            en presentaties op school.
+          </p>
+          <p>
+            Technisch ben ik het sterkst in IoT en device-integratie, maar ik werk even graag aan
+            software, netwerken of cloud. Mijn doel is niet de diepste specialist in één niche worden,
+            maar iemand zijn die het <em>brede plaatje</em> ziet én de details snapt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soft skills — prominent bovenaan -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Persoonlijke kwaliteiten</p>
+          <h2>Wat ik meeneem buiten de technische skills</h2>
+        </div>
+        <div class="grid three">
+          <article class="info-card reveal">
+            <h3>🤝 Teamwork</h3>
+            <p>Ik werk goed samen in diverse teams, draag bij zonder het spotlight te zoeken en houd rekening met de sterktes van anderen.</p>
+          </article>
+          <article class="info-card reveal">
+            <h3>🗣️ Communicatie</h3>
+            <p>Helder praten én schrijven, zowel technisch als naar niet-technisch publiek. Opgedaan via presentaties, vrijwilligerswerk en teamprojecten.</p>
+          </article>
+          <article class="info-card reveal">
+            <h3>👑 Leiderschap</h3>
+            <p>Ervaren als voorzitter van een jeugdorganisatie: richting geven, beslissingen nemen en anderen motiveren en meenemen.</p>
+          </article>
+          <article class="info-card reveal">
+            <h3>🎯 Discipline</h3>
+            <p>Deadlines halen, planning volhouden, ook wanneer het druk wordt. Een actieve sportieve levensstijl leert me doorzetten.</p>
+          </article>
+          <article class="info-card reveal">
+            <h3>🧩 Probleemoplossend</h3>
+            <p>Rust bewaren bij technische obstakels en systematisch naar oplossingen zoeken. Getraind door hands-on projectwerk.</p>
+          </article>
+          <article class="info-card reveal">
+            <h3>🚀 Motivatie</h3>
+            <p>Intrinsiek gedreven om te leren, te bouwen en verder te gaan dan het minimum. Niet omdat het moet, maar omdat ik het wil.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technische skills -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Technische vaardigheden</p>
+          <h2>Mijn huidige skillset</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>Netwerken &amp; Infrastructuur</h3>
+            <div class="skill-tags">
+              <span class="skill-badge"><span class="skill-dot"></span>TCP/IP &amp; Routing</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Switching &amp; VLANs</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Netwerkbeveiliging</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Linux CLI</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Firewall-basiskennis</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Cloud &amp; Hosting</h3>
+            <div class="skill-tags">
+              <span class="skill-badge"><span class="skill-dot"></span>Cloud fundamentals</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Hosting-configuratie</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Serverinrichting</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Automatisatie basics</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>IoT &amp; Hardware</h3>
+            <div class="skill-tags">
+              <span class="skill-badge"><span class="skill-dot"></span>Raspberry Pi / Orange Pi</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Pico microcontroller</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Sensorintegratie</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Device-to-device comm.</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Push-meldingen</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Software &amp; AI</h3>
+            <div class="skill-tags">
+              <span class="skill-badge"><span class="skill-dot"></span>Python</span>
+              <span class="skill-badge"><span class="skill-dot"></span>AI-model training</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Computer vision (basics)</span>
+              <span class="skill-badge"><span class="skill-dot"></span>HTML / CSS / JS</span>
+              <span class="skill-badge"><span class="skill-dot"></span>Git &amp; versiebeheer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Motivatie + ambitie -->
+    <section class="section alt">
+      <div class="container split-section">
+        <div>
+          <p class="eyebrow">Mijn motivatie</p>
+          <h2>Waarom Cloud &amp; Cybersecurity?</h2>
+          <p class="lead">
+            Niet omdat het "hot" is, maar omdat ik geloof dat technologie alleen waarde heeft
+            als mensen er iets mee kunnen. Ik wil de verbinding zijn tussen een technisch team
+            en de rest van de organisatie.
+          </p>
+          <p>
+            Na mijn opleiding wil ik een rol uitoefenen waar IT-kennis en businessinzicht
+            samenkomen, denk aan IT-consulting, solution architecture of een technische account-functie.
+          </p>
+        </div>
+        <div class="highlight-box reveal">
+          <h3>Wat je bij mij kan verwachten</h3>
+          <ul>
+            <li>Hands-on ingesteldheid, ik wil dingen zelf bouwen en begrijpen</li>
+            <li>Communicatief sterk, ook naar niet-technische stakeholders</li>
+            <li>Proactief leren en certificaten actief nastreven</li>
+            <li>Teamspeler die verantwoordelijkheid opneemt</li>
+            <li>Brede technische basis met diepgang in IoT en cloud</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Stan Smeyers</p>
+      <p>Portfolio gemaakt in HTML, CSS en JavaScript</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Stan Smeyers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script>(function(){ var t=localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">SS</span>
+        <span><strong>Stan Smeyers</strong><small>Cloud & Cybersecurity</small></span>
+      </a>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Thema wisselen">
+          <span class="icon-moon">🌙</span><span class="icon-sun">☀️</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">☰</button>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Projects</p>
+        <h1>Gebouwd, geleerd, gedaan.</h1>
+        <p class="lead narrow">
+          Vier projecten uit mijn opleiding, elk met een concrete technische uitdaging,
+          mijn exacte bijdrage en een duidelijk resultaat.
+        </p>
+        <div class="project-toolbar" aria-label="Projectfilters">
+          <button class="filter-chip active" type="button" data-filter="all">Alle projecten</button>
+          <button class="filter-chip" type="button" data-filter="iot">IoT</button>
+          <button class="filter-chip" type="button" data-filter="cloud">Cloud</button>
+          <button class="filter-chip" type="button" data-filter="ai">AI</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-stack">
+
+        <!-- 1: Agricloud -->
+        <article class="project-card reveal" data-category="iot">
+          <div class="project-card-main">
+            <p class="project-label">SKIL2, Semester 1 · IoT-project</p>
+            <h2>Agricloud: slim irrigatiesysteem</h2>
+            <div class="project-tech">
+              <span class="tag">IoT</span>
+              <span class="tag">Raspberry Pi</span>
+              <span class="tag">Orange Pi</span>
+              <span class="tag">Python</span>
+              <span class="tag">Sensoren</span>
+            </div>
+            <p>
+              Agricloud bouwt technologie voor slimme landbouw. De opdracht: een systeem ontwikkelen dat
+              real-time detecteert wanneer een veld aan irrigatie toe is, automatisch besproeit op basis
+              van sensordata, en de boer via pushmeldingen op de hoogte houdt. Doel: waterverspilling
+              verminderen en opbrengst verhogen.
+            </p>
+            <p style="margin-top: 0.75rem; padding: 0.9rem 1rem; background: var(--accent-soft); border-radius: 10px; border-left: 3px solid var(--accent);">
+              <strong style="display:block; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--accent); margin-bottom:4px;">Wat ik exact deed</strong>
+              Ik was verantwoordelijk voor de volledige IoT-laag: configuratie van Orange Pi en Raspberry Pi's,
+              opzetten van de device-to-device communicatie, schrijven van de sensoruitleeslogica in Python
+              en implementeren van het push-meldingensysteem. Ik debugde ook de fysieke bekabelingen en verbindingsproblemen.
+            </p>
+            <div class="project-media-block">
+              <div class="project-media-header">
+                <h3>Beelden uit de opbouwfase</h3>
+                <p>De hardware-opstelling tijdens het bouwen en testen van het systeem.</p>
+              </div>
+              <div class="media-gallery two-up">
+                <figure class="media-card">
+                  <button class="media-trigger" type="button"
+                    data-media-src="assets/projects/iot-opbouw-1.jpg"
+                    data-media-alt="Hardware-opstelling irrigatiesysteem">
+                    <img src="assets/projects/iot-opbouw-1.jpg" alt="Hardware-opstelling irrigatiesysteem" loading="lazy" />
+                  </button>
+                  <figcaption>Sensor- en bekabelingsopstelling tijdens de bouwfase.</figcaption>
+                </figure>
+                <figure class="media-card">
+                  <button class="media-trigger" type="button"
+                    data-media-src="assets/projects/iot-opbouw-2.jpg"
+                    data-media-alt="Device connectiviteit irrigatiesysteem">
+                    <img src="assets/projects/iot-opbouw-2.jpg" alt="Device connectiviteit irrigatiesysteem" loading="lazy" />
+                  </button>
+                  <figcaption>Prototypebekabeling en device-to-device connectiviteit.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="project-card-meta">
+            <h3>Mijn rol</h3>
+            <p>IoT-developer, hardware configuratie, device connectiviteit, Python-code en push-notificatielogica.</p>
+            <h3>Technieken</h3>
+            <p>Orange Pi, Raspberry Pi, Pico, sensorintegratie, Python, device-to-device communicatie, push-meldingen.</p>
+            <h3>Resultaat</h3>
+            <p>Een werkend prototype dat sensordata verwerkt, zelfstandig besproeit en de gebruiker realtime informeert.</p>
+            <h3>Wat ik leerde</h3>
+            <p>Hoe hardware en software samenwerken in een echt IoT-systeem. Debuggen van fysieke verbindingen, moeilijker dan verwacht.</p>
+          </div>
+        </article>
+
+        <!-- 2: Hostingplatform -->
+        <article class="project-card reveal" data-category="cloud">
+          <div class="project-card-main">
+            <p class="project-label">SKIL2, Semester 2 · Cloud-project (lopend)</p>
+            <h2>Professioneel hostingplatform voor een klant</h2>
+            <div class="project-tech">
+              <span class="tag">Cloud</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Security</span>
+              <span class="tag">Automatisatie</span>
+              <span class="tag">Hosting</span>
+            </div>
+            <p>
+              In semester 2 bouwen we als team een volledig functioneel hostingplatform voor een echte klant.
+              Het platform moet websites, databanken en services kunnen hosten op een veilige, schaalbare manier,
+              met automatisatie van terugkerende taken en een professionele opzet die bedrijfsklaar is.
+            </p>
+            <p style="margin-top: 0.75rem; padding: 0.9rem 1rem; background: var(--accent-soft); border-radius: 10px; border-left: 3px solid var(--accent);">
+              <strong style="display:block; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--accent); margin-bottom:4px;">Wat ik exact doe</strong>
+              Ik werk mee aan de architectuurplanning van het platform, de configuratie van de serveromgeving
+              en de security-laag: toegangsrechten, firewall-regels en bescherming van de infrastructuur.
+              Ik hielp ook bij presentaties en documentatie richting de opdrachtgever.
+            </p>
+            <div class="project-media-block">
+              <div class="project-media-header">
+                <h3>Beelden van het platform</h3>
+                <p>Screenshots uit de opbouw- en configuratiefase van het hostingplatform.</p>
+              </div>
+              <div class="media-gallery two-up">
+                <figure class="media-card">
+                  <button class="media-trigger" type="button"
+                    data-media-src="assets/projects/hosting2.jpg"
+                    data-media-alt="Hostingplatform configuratie">
+                    <img src="assets/projects/hosting2.jpg" alt="Hostingplatform configuratie" loading="lazy" />
+                  </button>
+                  <figcaption>Opbouw en configuratie van het hostingplatform.</figcaption>
+                </figure>
+                <figure class="media-card">
+                  <button class="media-trigger" type="button"
+                    data-media-src="assets/projects/hosting1.jpg"
+                    data-media-alt="Hostingplatform infrastructuur">
+                    <img src="assets/projects/hosting1.jpg" alt="Hostingplatform infrastructuur" loading="lazy" />
+                  </button>
+                  <figcaption>Infrastructuur en serverinrichting van het platform.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="project-card-meta">
+            <h3>Mijn rol</h3>
+            <p>Cloud-engineer binnen een team, infrastructuurplanning, serverconfiguratie en security-setup.</p>
+            <h3>Technieken</h3>
+            <p>Linux, cloud hosting, serverinrichting, automatisatie, firewall-configuratie.</p>
+            <h3>Status</h3>
+            <p>Lopend project, het platform wordt stap voor stap uitgebouwd tot een productierijpe omgeving.</p>
+            <h3>Wat ik opbouw</h3>
+            <p>Praktische cloud- en hostingkennis in een reëel scenario met een echte klant en professionele vereisten.</p>
+          </div>
+        </article>
+
+        <!-- 3: Slimme brievenbus -->
+        <article class="project-card reveal" data-category="iot ai">
+          <div class="project-card-main">
+            <p class="project-label">IoT Essentials · AI + IoT project</p>
+            <h2>Slimme brievenbus met AI-herkenning</h2>
+            <div class="project-tech">
+              <span class="tag">IoT</span>
+              <span class="tag">AI</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Python</span>
+            </div>
+            <p>
+              Een postbode scant bij elke bezorging wat hij in de brievenbus stopt: brief, pakket of reclame.
+              De klant stelt zelf in of hij reclame wenst en krijgt automatisch een melding op zijn telefoon
+              wanneer er post aankomt, inclusief het type. Het systeem combineert een getraind AI-model
+              met IoT-hardware tot een gebruiksvriendelijke oplossing.
+            </p>
+            <p style="margin-top: 0.75rem; padding: 0.9rem 1rem; background: var(--accent-soft); border-radius: 10px; border-left: 3px solid var(--accent);">
+              <strong style="display:block; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--accent); margin-bottom:4px;">Wat ik exact deed</strong>
+              Ik trainde het AI-model dat posttypen herkent via de camera, schreef de softwarelogica die
+              classificaties vertaalt naar acties (melding sturen, reclame blokkeren) en integreerde de IoT-devices.
+              Ik was ook verantwoordelijk voor een groot deel van de achterliggende code.
+            </p>
+            <div class="project-media-block">
+              <div class="project-media-header">
+                <h3>Ontwikkelvideo</h3>
+                <p>Fragment uit de periode dat we het AI-model aan het trainen en testen waren.</p>
+              </div>
+              <figure class="media-card video-card">
+                <video controls preload="metadata">
+                  <source src="assets/projects/brievenbus-video.mp4" type="video/mp4" />
+                  Je browser ondersteunt deze video niet.
+                </video>
+                <figcaption>Ontwikkeling en AI-training van de slimme brievenbus.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="project-card-meta">
+            <h3>Mijn rol</h3>
+            <p>AI-developer &amp; software-engineer, modeltraining, classificatielogica en IoT-koppeling.</p>
+            <h3>Technieken</h3>
+            <p>Python, computer vision, AI-modeltraining, IoT-hardware, camera-integratie, push-notificaties.</p>
+            <h3>Resultaat</h3>
+            <p>Een werkend prototype dat posttype herkent, ongewenste reclame filtert en de gebruiker realtime informeert.</p>
+            <h3>Wat ik leerde</h3>
+            <p>Hoe je een AI-model traint voor een concreet geval en integreert in een hardware-softwareomgeving.</p>
+          </div>
+        </article>
+
+        <!-- 4: Racegame -->
+        <article class="project-card reveal" data-category="ai">
+          <div class="project-card-main">
+            <p class="project-label">Integration Skills · Projectweek</p>
+            <h2>AI-racegame met handtracking</h2>
+            <div class="project-tech">
+              <span class="tag">AI</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Python</span>
+              <span class="tag">Game development</span>
+            </div>
+            <p>
+              Tijdens een intensieve projectweek bouwde ons team een interactieve racegame waarbij de speler
+              geen controller gebruikt, maar zijn handen. Een camera detecteert handbewegingen via een getraind
+              AI-model en vertaalt die naar besturingssignalen voor de auto in het spel. Obstakels ontwijken
+              doe je letterlijk met je handen.
+            </p>
+            <p style="margin-top: 0.75rem; padding: 0.9rem 1rem; background: var(--accent-soft); border-radius: 10px; border-left: 3px solid var(--accent);">
+              <strong style="display:block; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--accent); margin-bottom:4px;">Wat ik exact deed</strong>
+              Ik trainde het handtracking-model dat bewegingen herkent en classificeert, en schreef de code
+              die die output omzet naar spelbediening. Ik debugde ook de latency-problemen tussen
+              cameraherkenning en reactie in het spel, zodat de bediening vloeiend aanvoelde.
+            </p>
+            <div class="project-media-block">
+              <div class="project-media-header">
+                <h3>Ontwikkelvideo</h3>
+                <p>Fragment uit de testfase, de AI-bediening in actie.</p>
+              </div>
+              <figure class="media-card video-card">
+                <video controls preload="metadata" poster="assets/projects/racegame-poster.jpg">
+                  <source src="assets/projects/racegame-video.mp4" type="video/mp4" />
+                  Je browser ondersteunt deze video niet.
+                </video>
+                <figcaption>Handtracking en gamebediening tijdens de testfase.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="project-card-meta">
+            <h3>Mijn rol</h3>
+            <p>AI-developer, modeltraining, handtracking-logica en koppeling met de game engine.</p>
+            <h3>Technieken</h3>
+            <p>Python, computer vision, AI-modeltraining, real-time inputverwerking, game development basics.</p>
+            <h3>Resultaat</h3>
+            <p>Een volledig speelbare racegame aangestuurd door handgebaren, gebouwd in één week, van idee tot werkende demo.</p>
+            <h3>Wat ik leerde</h3>
+            <p>Snel schakelen onder tijdsdruk, AI inzetten voor creatieve toepassingen en de complexiteit van real-time herkenning.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Sluiten">×</button>
+    <img class="lightbox-image" src="" alt="" />
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Stan Smeyers</p>
+      <p>Portfolio gemaakt in HTML, CSS en JavaScript</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
